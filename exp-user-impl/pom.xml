@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.zc</groupId>
+		<artifactId>exp</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>exp-user-impl</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.zc</groupId>
+			<artifactId>exp-user-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.zc</groupId>
+			<artifactId>exp-user-dao</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+
+		<!-- for test start -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.test4j</groupId>
+			<artifactId>test4j.testng</artifactId>
+			<version>2.0.6</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.test4j</groupId>
+			<artifactId>test4j.integrated</artifactId>
+			<version>2.0.6</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.test4j</groupId>
+			<artifactId>test4j.spec</artifactId>
+			<version>2.0.6</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- for test end -->
+	</dependencies>
+</project>

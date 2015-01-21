@@ -1,43 +1,49 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<!-- <parent> <groupId>com.lifeix.pom</groupId> <artifactId>base.pom</artifactId> 
-		<version>1.2.7-SNAPSHOT</version> </parent> -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.lifeix.pom</groupId>
+    <artifactId>base.pom</artifactId>
+    <packaging>pom</packaging>
+    <version>1.2.6</version>
+    <name>base.pom</name>
 
-	<groupId>com.zc</groupId>
-	<artifactId>exp</artifactId>
-	<packaging>pom</packaging>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>exp</name>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+    </properties>
 
-	<modules>
+    <modules>
+        <module>lifeix-war</module>
+    </modules>
 
-		<module>exp-user-dao</module>
-		<module>exp-user-impl</module>
-		<module>exp-user-service</module>
-		<module>exp-web</module>
-		<module>exp-user-war</module>
-	</modules>
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>Nexus Releases Repository</name>
+            <url>http://192.168.199.45:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>Nexus Snapshots Repository</name>
+            <url>http://192.168.199.45:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>jar-no-fork</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.6</source>
+                        <target>1.6</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
-	<dependencies>
-
+    <dependencyManagement>
+        <dependencies>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
@@ -81,6 +87,21 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-webmvc</artifactId>
+                <version>3.2.13.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.web.servlet</groupId>
+                <artifactId>org.springframework.web.servlet</artifactId>
+                <version>3.2.13.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.web.portlet</groupId>
+                <artifactId>org.springframework.web.portlet</artifactId>
+                <version>3.2.13.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.web.struts</groupId>
+                <artifactId>org.springframework.web.struts</artifactId>
                 <version>3.2.13.RELEASE</version>
             </dependency>
 
@@ -343,6 +364,13 @@
             </dependency>
             <!-- for test end -->
 
-	</dependencies>
+        </dependencies>
+
+
+    </dependencyManagement>
+
+
+
 
 </project>
+
