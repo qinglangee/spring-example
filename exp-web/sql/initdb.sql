@@ -1,4 +1,6 @@
--- username  password
+-- mysql -uusername -p
+-- 
+
 
 CREATE DATABASE `spring_example` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 use spring_example;
@@ -18,3 +20,4 @@ CREATE TABLE `userinfo` (
 
 insert into `userinfo` (userId, userName, password, age)values(1, "zhch", "mm", 12);
 insert into `userinfo` (userId, userName, password, age)values(2, "lisi", "mm", 8);
+update `userinfo` set createTime=updateTime;

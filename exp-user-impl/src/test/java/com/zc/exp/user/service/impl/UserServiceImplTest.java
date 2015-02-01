@@ -16,8 +16,6 @@ public class UserServiceImplTest {
 
 	private ClassPathXmlApplicationContext context;
 
-	private Long accountId;
-
 	@BeforeClass
 	public void init() {
 
@@ -26,8 +24,6 @@ public class UserServiceImplTest {
 		context.start();
 		userService = (UserService) context.getBean("userService");
 
-		// 测试账号 id 961205 l99no 3592061
-		accountId = 961205L;
 	}
 
 	@SpringBeanByName
