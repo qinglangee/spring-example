@@ -40,7 +40,7 @@
 	</bean>
 
 	
-	<import resource="classpath:exp-user-spring-dao.xml" />
+	<!-- <import resource="classpath:exp-user-spring-dao.xml" /> -->
 	<import resource="classpath:exp-user-spring-service.xml" />
 	<!-- <import resource="classpath:exp-user-spring-dubbo.xml" /> -->
 

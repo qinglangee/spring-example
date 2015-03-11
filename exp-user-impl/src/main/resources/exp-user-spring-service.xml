@@ -11,5 +11,5 @@
 		<property name="userDao" ref="userDao" />
 		<property name="defaultName" value="${user.default.name}" />
 	</bean>
-
+	<import resource="classpath:exp-user-spring-dao.xml" />
 </beans>
